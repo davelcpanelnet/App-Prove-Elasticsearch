@@ -39,25 +39,25 @@ How To
 
 5. Ensure that your testers and CI platform have an elastest.conf configured with something like the following in their $HOME:
 
-`[server]`
-`host=$ES_HOST`
-`port=$ES_PORT`
-`[client]`
-`autodiscover=ByName`
-`queue=Rabbit`
-`provisioners=Git`
-`versioner=Git`
-`[queue]`
-`host=$rabbit_host`
-`user=$rabbit_user`
-`password=$rabbit_pw`
-`[testd]`
-`max_workers=5`
-`[runner]`
-`args=-vm`
-`[PlatformGroups]`
-`Operating Systems = CentOS 7 64-bit,CentOS 6 32-bit`
-`Browsers = Firefox,Chrome`
+`[server]
+host=$ES_HOST
+port=$ES_PORT
+[client]
+autodiscover=ByName
+queue=Rabbit
+provisioners=Git
+versioner=Git
+[queue]
+host=$rabbit_host
+user=$rabbit_user
+password=$rabbit_pw
+[testd]
+max_workers=5
+[runner]
+args=-vm
+[PlatformGroups]
+Operating Systems = CentOS 7 64-bit,CentOS 6 32-bit
+Browsers = Firefox,Chrome`
 
 6. have `testd` running on some or all of your testers' machines.
 
